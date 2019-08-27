@@ -1,0 +1,27 @@
+﻿<Application
+    x:Class="NanoBatteryTest.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:NanoBatteryTest"
+    StartupUri="MainWindow.xaml">
+
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/NanoBatteryTest;component/styles/TextBlockStyles.xaml" />
+                <ResourceDictionary Source="/NanoBatteryTest;component/styles/Brushes.xaml" />
+                <ResourceDictionary Source="/NanoBatteryTest;component/styles/Others.xaml" />
+                <ResourceDictionary Source="/NanoBatteryTest;component/styles/ToggleButton.xaml" />
+                <ResourceDictionary Source="/NanoBatteryTest;component/styles/ListBoxes.xaml" />
+                <ResourceDictionary Source="/NanoBatteryTest;component/styles/Buttons.xaml" />
+                <ResourceDictionary Source="/NanoBatteryTest;component/styles/Arrows.xaml" />
+                <ResourceDictionary Source="/NanoBatteryTest;component/styles/Icons.xaml" />
+
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+
+</Application>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NanoBatteryTest.Helpers.BatteryTestUnit" Collapsed="true">
+    <Position X="1.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAABAQAAAAAAAAAAAAAABQAAEA=</HashCode>
+      <FileName>Helpers\BatteryTestUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NanoBatteryTest.Helpers.BatteryC20TestUnit" Collapsed="true">
+    <Position X="0.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Helpers\BatteryTestUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NanoBatteryTest.Helpers.BatteryRealWorkTesUnit" Collapsed="true">
+    <Position X="2.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Helpers\BatteryTestUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NanoBatteryTest.Helpers.ExperimentStageBase" Collapsed="true">
+    <Position X="3" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEABIAAAABCQABCRAiAAAoAoggAgQAACIAAAAAAQAA=</HashCode>
+      <FileName>Helpers\ExperimentStage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NanoBatteryTest.Helpers.ChargeStage" Collapsed="true">
+    <Position X="0.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAIEgAAAhQAAAAAAAAAQAAA=</HashCode>
+      <FileName>Helpers\ExperimentStage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NanoBatteryTest.Helpers.DischargeStage" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAIAgAAAgQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\ExperimentStage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NanoBatteryTest.Helpers.RelaxStage" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAIAgAAAgQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\ExperimentStage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NanoBatteryTest.Helpers.MeassurePoint" Collapsed="true">
+    <Position X="7.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAgIAAAAAAAAAAgACAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Helpers\MeassurePoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NanoBatteryTest.Helpers.ResultsPoint" Collapsed="true">
+    <Position X="9.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAEAgIAAAICQAQACAAAAQAAEAAAAAAAAJAACQAZBAAA=</HashCode>
+      <FileName>Helpers\ResultsPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="NanoBatteryTest.Helpers.StageResult" Collapsed="true">
+    <Position X="7.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAFIAAAAAAAA=</HashCode>
+      <FileName>Helpers\ExperimentStage.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

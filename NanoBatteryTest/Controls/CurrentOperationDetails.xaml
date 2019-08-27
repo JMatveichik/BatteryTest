@@ -1,0 +1,167 @@
+﻿<UserControl
+    x:Class="NanoBatteryTest.Controls.CurrentOperationDetails"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:c="clr-namespace:CalcBinding;assembly=CalcBinding"
+    xmlns:conv="clr-namespace:ArtWPFHelpers.Converters;assembly=ArtWPFHelpers"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:l="clr-namespace:ArtWPFHelpers.Localization;assembly=ArtWPFHelpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tel="http://schemas.telerik.com/2008/xaml/presentation"
+    d:DesignHeight="500"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+
+    <Grid Margin="10">
+
+        <Grid.Resources>
+
+            <conv:BooleanToStringConverter
+                x:Key="SartStop"
+                FalseStateString="{l:Localization Start}"
+                TrueStateString="{l:Localization Stop}" />
+
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Border
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Style="{StaticResource BorderUnderlineStyle}">
+            <TextBlock Style="{StaticResource PageTitleStyle}" Text="{l:Localization OperationDetails}" />
+
+        </Border>
+
+
+        <Image
+            Grid.Row="1"
+            Margin="5,5"
+            HorizontalAlignment="Left"
+            Source="/NanoBatteryTest;component/Resources/flash_yellow.ico"
+            Style="{StaticResource PulseUpImage}"
+            Tag="true"
+            Visibility="{c:Binding IsChargeMode,
+                                   FalseToVisibility=Collapsed}" />
+
+        <Image
+            Grid.Row="1"
+            Margin="5,5"
+            HorizontalAlignment="Left"
+            Source="/NanoBatteryTest;component/Resources/flash_red.ico"
+            Style="{StaticResource PulseDownImage}"
+            Tag="true"
+            Visibility="{c:Binding IsDischargeMode,
+                                   FalseToVisibility=Collapsed}" />
+
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="1"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            Style="{StaticResource PageInformationStyle}"
+            Text="{Binding CurrentStageInfo}" />
+
+
+
+        <Grid
+            Grid.Row="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"
+            Margin="0,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Image
+                Grid.Row="0"
+                Grid.Column="0"
+                Width="32"
+                Height="32"
+                Margin="5,5"
+                HorizontalAlignment="Center"
+                Source="{StaticResource ClockImage}" />
+
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="0"
+                HorizontalAlignment="Center"
+                Style="{StaticResource PageLargeValue}"
+                Text="{Binding Duration, StringFormat=\{0:hh\\:mm\\:ss\}}" />
+
+            <Image
+                Grid.Row="0"
+                Grid.Column="1"
+                Width="32"
+                Height="32"
+                Margin="5,5"
+                HorizontalAlignment="Center"
+                Source="{StaticResource CycleImage}" />
+
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                Style="{StaticResource PageLargeValue}"
+                Text="{Binding CurrentCycle}" />
+
+            <Image
+                Grid.Row="0"
+                Grid.Column="2"
+                Width="32"
+                Height="32"
+                Margin="5,5"
+                HorizontalAlignment="Center"
+                Source="{StaticResource DeltaCurrent}" />
+
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="2"
+                HorizontalAlignment="Center"
+                Style="{StaticResource PageLargeValue}"
+                Text="{Binding DeltaCurrent, StringFormat=\{0:F3\}}" />
+
+
+            <Image
+                Grid.Row="0"
+                Grid.Column="3"
+                Width="32"
+                Height="32"
+                Margin="5,5"
+                HorizontalAlignment="Center"
+                Source="{StaticResource SummCharge}" />
+
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="3"
+                HorizontalAlignment="Center"
+                Style="{StaticResource PageLargeValue}"
+                Text="{Binding TotalCharge, StringFormat=\{0:F3\}}" />
+
+
+        </Grid>
+
+    </Grid>
+
+</UserControl>

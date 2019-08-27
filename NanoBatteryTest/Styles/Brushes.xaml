@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="UnderlineBorderBrush" Color="#FF113B8F" />
+
+    <SolidColorBrush x:Key="CurrentBrush" Color="#FFDC6E0A" />
+    <SolidColorBrush x:Key="VoltageBrush" Color="#FF0A6ED2" />
+
+    <SolidColorBrush x:Key="BatteryWithCNMBrush" Color="#FF9B2063" />
+    <SolidColorBrush x:Key="SingleBatteryBrush" Color="#FF27BB5D" />
+
+
+</ResourceDictionary>

@@ -1,0 +1,347 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation">
+
+    <SolidColorBrush x:Key="BorderBrushNormal1" Color="#FF83A5D2" />
+    <LinearGradientBrush x:Key="BackgroundNormal1" StartPoint="0.5,0" EndPoint="0.5,1">
+
+        <GradientStop Color="#FFA1C5F2" />
+        <GradientStop Color="#FFEBF3FF" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ThumbBackgroundChecked1" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFFFFEF3" />
+        <GradientStop Offset="1" Color="#FFFAF0AF" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ThumbBackgroundChecked2" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#B0FFFEF3" />
+        <GradientStop Offset="1" Color="#B0FAF0AF" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ThumbBackgroundDisabled" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFFFFEF3" />
+        <GradientStop Offset="1" Color="#FFC8C8C8" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="BorderChecked" Color="#FFFFB428" />
+    <SolidColorBrush x:Key="BorderDisabled" Color="#FFC8C8C8" />
+
+    <LinearGradientBrush x:Key="ThumbBackground1" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFEBF3FF" />
+        <GradientStop Offset="0.5" Color="#FFCAE1FF" />
+        <GradientStop Offset="0.5" Color="#FFA1C5F2" />
+        <GradientStop Offset="1" Color="#FFD0F3FF" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ThumbBackgroundMouseOver1" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Offset="0" Color="#FFFFFBDA" />
+        <GradientStop Offset="0.50" Color="#FFFEEBAE" />
+        <GradientStop Offset="0.50" Color="#FFFFD25A" />
+        <GradientStop Offset="1" Color="#FFFFFBA3" />
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ThumbBackgroundPressed1" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Offset="0" Color="#FFFFDCAB" />
+        <GradientStop Offset="0.5" Color="#FFFFD18F" />
+        <GradientStop Offset="0.5" Color="#FFFE9227" />
+        <GradientStop Offset="0" Color="#FFFFBA74" />
+    </LinearGradientBrush>
+
+
+
+    <Style x:Key="SmallSwitchButtonStyle" TargetType="telerik:RadToggleButton">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="5,1" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontFamily" Value="PF Din Text Pro" />
+
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Right" />
+        <Setter Property="Background" Value="{StaticResource BackgroundNormal1}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrushNormal1}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Height" Value="22" />
+        <Setter Property="Width" Value="57" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerik:RadToggleButton">
+                    <Grid>
+                        <Grid SnapsToDevicePixels="True">
+                            <Rectangle
+                                x:Name="Track"
+                                Fill="{TemplateBinding Background}"
+                                RadiusX="10"
+                                RadiusY="10"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}" />
+
+                            <Ellipse
+                                x:Name="Thumb"
+                                Width="22"
+                                HorizontalAlignment="Left"
+                                Fill="{StaticResource ThumbBackground1}"
+                                RenderTransformOrigin="0.5,0.5"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="1">
+                                <Ellipse.RenderTransform>
+                                    <TranslateTransform X="0" Y="0" />
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                        </Grid>
+
+                        <ContentPresenter
+                            x:Name="Content"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                            RecognizesAccessKey="True" />
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition From="Unchecked" To="Checked">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Thumb" Storyboard.TargetProperty="(Ellipse.RenderTransform).(TranslateTransform.X)">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="35">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <QuadraticEase EasingMode="EaseInOut" />
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                            </DoubleAnimationUsingKeyFrames>
+
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1" />
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                    <VisualTransition From="Checked" To="UnChecked">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Thumb" Storyboard.TargetProperty="(Ellipse.RenderTransform).(TranslateTransform.X)">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="35" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <QuadraticEase EasingMode="EaseInOut" />
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                            </DoubleAnimationUsingKeyFrames>
+
+
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1" />
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Thumb" Storyboard.TargetProperty="(Ellipse.RenderTransform).(TranslateTransform.X)">
+                                            <EasingDoubleKeyFrame KeyTime="0" Value="35" />
+                                            <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="35">
+                                                <EasingDoubleKeyFrame.EasingFunction>
+                                                    <QuadraticEase EasingMode="EaseInOut" />
+                                                </EasingDoubleKeyFrame.EasingFunction>
+                                            </EasingDoubleKeyFrame>
+                                        </DoubleAnimationUsingKeyFrames>
+
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                            <EasingDoubleKeyFrame KeyTime="0" Value="1" />
+                                            <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <Storyboard />
+                                </VisualState>
+
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Thumb" Property="Fill" Value="{StaticResource ThumbBackgroundMouseOver1}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Thumb" Property="Fill" Value="{StaticResource ThumbBackgroundPressed1}" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="Content" Property="HorizontalAlignment" Value="Left" />
+                            <Setter TargetName="Track" Property="Stroke" Value="{StaticResource BorderChecked}" />
+                            <Setter TargetName="Track" Property="Fill" Value="{StaticResource ThumbBackgroundChecked1}" />
+                            <Setter TargetName="Thumb" Property="Stroke" Value="{StaticResource BorderChecked}" />
+                            <Setter TargetName="Thumb" Property="Fill" Value="{StaticResource ThumbBackgroundPressed1}" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Track" Property="Stroke" Value="{StaticResource BorderDisabled}" />
+                            <Setter TargetName="Track" Property="Fill" Value="{StaticResource ThumbBackgroundDisabled}" />
+                            <Setter TargetName="Thumb" Property="Fill" Value="{StaticResource ThumbBackgroundDisabled}" />
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NormalSwitchButtonStyle" TargetType="telerik:RadToggleButton">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="5,1" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontFamily" Value="PF Din Text Pro" />
+
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Right" />
+        <Setter Property="Background" Value="{StaticResource BackgroundNormal1}" />
+        <Setter Property="BorderBrush" Value="{StaticResource BorderBrushNormal1}" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="Height" Value="32" />
+        <Setter Property="Width" Value="77" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="telerik:RadToggleButton">
+                    <Grid>
+                        <Grid SnapsToDevicePixels="True">
+                            <Rectangle
+                                x:Name="Track"
+                                Fill="{TemplateBinding Background}"
+                                RadiusX="16"
+                                RadiusY="16"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}" />
+
+                            <Ellipse
+                                x:Name="Thumb"
+                                Width="{TemplateBinding Height}"
+                                HorizontalAlignment="Left"
+                                Fill="{StaticResource ThumbBackground1}"
+                                RenderTransformOrigin="0.5,0.5"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="1">
+                                <Ellipse.RenderTransform>
+                                    <TranslateTransform X="0" Y="0" />
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                        </Grid>
+
+                        <ContentPresenter
+                            x:Name="Content"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}"
+                            ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                            RecognizesAccessKey="True" />
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition From="Unchecked" To="Checked">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Thumb" Storyboard.TargetProperty="(Ellipse.RenderTransform).(TranslateTransform.X)">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="45">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <QuadraticEase EasingMode="EaseInOut" />
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                            </DoubleAnimationUsingKeyFrames>
+
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1" />
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                    <VisualTransition From="Checked" To="UnChecked">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Thumb" Storyboard.TargetProperty="(Ellipse.RenderTransform).(TranslateTransform.X)">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="45" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="0">
+                                                    <EasingDoubleKeyFrame.EasingFunction>
+                                                        <QuadraticEase EasingMode="EaseInOut" />
+                                                    </EasingDoubleKeyFrame.EasingFunction>
+                                                </EasingDoubleKeyFrame>
+                                            </DoubleAnimationUsingKeyFrames>
+
+
+                                            <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                                <EasingDoubleKeyFrame KeyTime="0" Value="0" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="0" />
+                                                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1" />
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                </VisualStateGroup.Transitions>
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Thumb" Storyboard.TargetProperty="(Ellipse.RenderTransform).(TranslateTransform.X)">
+                                            <EasingDoubleKeyFrame KeyTime="0" Value="45" />
+                                            <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="45">
+                                                <EasingDoubleKeyFrame.EasingFunction>
+                                                    <QuadraticEase EasingMode="EaseInOut" />
+                                                </EasingDoubleKeyFrame.EasingFunction>
+                                            </EasingDoubleKeyFrame>
+                                        </DoubleAnimationUsingKeyFrames>
+
+                                        <DoubleAnimationUsingKeyFrames Storyboard.TargetName="Content" Storyboard.TargetProperty="(UIElement.Opacity)">
+                                            <EasingDoubleKeyFrame KeyTime="0" Value="1" />
+                                            <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1" />
+                                        </DoubleAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <Storyboard />
+                                </VisualState>
+
+
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Thumb" Property="Fill" Value="{StaticResource ThumbBackgroundMouseOver1}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="Thumb" Property="Fill" Value="{StaticResource ThumbBackgroundPressed1}" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="Content" Property="HorizontalAlignment" Value="Left" />
+                            <Setter TargetName="Track" Property="Stroke" Value="{StaticResource BorderChecked}" />
+                            <Setter TargetName="Track" Property="Fill" Value="{StaticResource ThumbBackgroundChecked1}" />
+                            <Setter TargetName="Thumb" Property="Stroke" Value="{StaticResource BorderChecked}" />
+                            <Setter TargetName="Thumb" Property="Fill" Value="{StaticResource ThumbBackgroundPressed1}" />
+                        </Trigger>
+
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Track" Property="Stroke" Value="{StaticResource BorderDisabled}" />
+                            <Setter TargetName="Track" Property="Fill" Value="{StaticResource ThumbBackgroundDisabled}" />
+                            <Setter TargetName="Thumb" Property="Fill" Value="{StaticResource ThumbBackgroundChecked2}" />
+                        </Trigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+
+
+
+</ResourceDictionary>

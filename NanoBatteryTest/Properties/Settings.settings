@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NanoBatteryTest.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="StartFromCharge" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="BatteryCapacity" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="ChargeVoltage" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">14.4</Value>
+    </Setting>
+    <Setting Name="CurrentStabilityWnd" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">02:00:00</Value>
+    </Setting>
+    <Setting Name="AftreChargeRelaxation" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">02:00:00</Value>
+    </Setting>
+    <Setting Name="ChargeTimeout" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">10:00:00</Value>
+    </Setting>
+    <Setting Name="CurrentPercentLimit" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="LowBatteryVoltageLimit" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">10.8</Value>
+    </Setting>
+    <Setting Name="HighBatteryVoltageLimit" Type="System.Double" Scope="User">
+      <Value Profile="(Default)">14.3</Value>
+    </Setting>
+    <Setting Name="CyclesCount" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="ChargeWhenComplete" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

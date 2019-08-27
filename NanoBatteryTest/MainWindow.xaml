@@ -1,0 +1,103 @@
+﻿<Window
+    x:Class="NanoBatteryTest.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:content="clr-namespace:NanoBatteryTest.Content"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:l="clr-namespace:ArtWPFHelpers.Localization;assembly=ArtWPFHelpers"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tel="http://schemas.telerik.com/2008/xaml/presentation"
+    Width="1280"
+    Height="1024"
+    Icon="battery_preferences.ico"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    WindowState="Maximized"
+    WindowStyle="None"
+    mc:Ignorable="d">
+
+    <Border BorderThickness="0.5">
+
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+
+            <content:AppHeader Grid.Row="0" />
+
+
+            <Border
+                Grid.Row="1"
+                Margin="1"
+                BorderBrush="{StaticResource UnderlineBorderBrush}"
+                BorderThickness="1,1">
+
+
+                <Grid>
+                    <!--
+                    <ContentPresenter Content="{Binding CurrentContent}" />
+                    -->
+
+                    <tel:RadTabControl
+                        Align="Right"
+                        TabOrientation="Vertical"
+                        TabStripPlacement="Left">
+
+                        <!--  ABOUT  -->
+                        <tel:RadTabItem>
+
+                            <tel:RadTabItem.Header>
+                                <Image Source="{StaticResource Info}" Style="{StaticResource TabControlImage}" />
+                            </tel:RadTabItem.Header>
+
+                            <content:WelcomePage />
+
+                        </tel:RadTabItem>
+
+                        <!--  PARAMETERS  -->
+                        <tel:RadTabItem>
+
+                            <tel:RadTabItem.Header>
+                                <Image Source="{StaticResource Parameters}" Style="{StaticResource TabControlImage}" />
+                            </tel:RadTabItem.Header>
+
+                            <content:ProcessParametersPage />
+
+                        </tel:RadTabItem>
+
+                        <!--  CURRENT STAGE  -->
+                        <tel:RadTabItem>
+
+                            <tel:RadTabItem.Header>
+                                <Image Source="{StaticResource StageInfo}" Style="{StaticResource TabControlImage}" />
+                            </tel:RadTabItem.Header>
+
+                            <content:FacilitySchemaPage />
+                        </tel:RadTabItem>
+
+                        <!--  ARCHIVE  -->
+                        <tel:RadTabItem>
+
+                            <tel:RadTabItem.Header>
+                                <Image Source="{StaticResource Archive}" Style="{StaticResource TabControlImage}" />
+                            </tel:RadTabItem.Header>
+
+                            <content:ResultsPage />
+
+                        </tel:RadTabItem>
+
+                    </tel:RadTabControl>
+
+                </Grid>
+
+
+            </Border>
+
+
+
+        </Grid>
+    </Border>
+</Window>

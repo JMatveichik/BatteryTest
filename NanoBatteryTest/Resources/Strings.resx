@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve">
+    <value>СТЕНД ИСПЫТАНИЯ АККУМУЛЯТОРНЫХ БАТАРЕЙ</value>
+  </data>
+  <data name="Art" xml:space="preserve">
+    <value>ПЕРЕДОВЫЕ ИССЛЕДОВАНИЯ И ТЕХНОЛОГИИ</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>НАЗАД</value>
+  </data>
+  <data name="Begin" xml:space="preserve">
+    <value>НАЧАЛО</value>
+  </data>
+  <data name="Current" xml:space="preserve">
+    <value>ТОК, A</value>
+  </data>
+  <data name="CurrentAxisTitle" xml:space="preserve">
+    <value>ТОК, A</value>
+  </data>
+  <data name="DevConnectionIformation" xml:space="preserve">
+    <value>СОЕДИНЕНИЕ С УСТРОЙСТВАМИ КОНТРОЛЯ И СБОРА ИНФОРМАЦИИ</value>
+  </data>
+  <data name="DevConnectionTitle" xml:space="preserve">
+    <value>ПРОМЫШЛЕННАЯ СЕТЬ</value>
+  </data>
+  <data name="ElectricDesigner" xml:space="preserve">
+    <value>ЭЛЕКТРОНИКА АСУ:</value>
+  </data>
+  <data name="ElectricDesignerNames" xml:space="preserve">
+    <value>ЧЕРВЯК А.Г.</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>ОШИБКА</value>
+  </data>
+  <data name="Exit" xml:space="preserve">
+    <value>ВЫХОД</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>ЯЗЫК</value>
+  </data>
+  <data name="Messages" xml:space="preserve">
+    <value>СООБЩЕНИЯ</value>
+  </data>
+  <data name="MessagesTitle" xml:space="preserve">
+    <value>СООБЩЕНИЯ СИСТЕМЫ</value>
+  </data>
+  <data name="MsgConnectionToDevice" xml:space="preserve">
+    <value>ПРОВЕРКА СВЯЗИ С УСТРОЙСТВАМИ УПРАВЛЕНИЯ И СБОРА ИНФОРМАЦИИ</value>
+  </data>
+  <data name="MsgDeviceConnectionFailed" xml:space="preserve">
+    <value>ОШИБКА СОЕДИНЕНИЯ С УСТРОЙСТВОМ {0} ПО АДРЕСУ {1}</value>
+  </data>
+  <data name="MsgDeviceStarted" xml:space="preserve">
+    <value>УСТРОЙСТВО  {0} ПО АДРЕСУ {1} БЫЛО ЗАПУЩЕНО</value>
+  </data>
+  <data name="PowerSourceReverse" xml:space="preserve">
+    <value>РЕВЕРС</value>
+  </data>
+  <data name="PowerSourceSwitch" xml:space="preserve">
+    <value>РАБОТА</value>
+  </data>
+  <data name="PowerSource" xml:space="preserve">
+    <value>ИСТОЧНИК ПИТАНИЯ</value>
+  </data>
+  <data name="ProgrammDesigner" xml:space="preserve">
+    <value>РАЗРАБОТЧИК ПО :</value>
+  </data>
+  <data name="ProgrammDesignerNames" xml:space="preserve">
+    <value>МАТВЕЙЧИК Е.А.</value>
+  </data>
+  <data name="SaveData" xml:space="preserve">
+    <value>СОХРАНИТЬ</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>РАБОТА</value>
+  </data>
+  <data name="Stop" xml:space="preserve">
+    <value>СТОП</value>
+  </data>
+  <data name="Tehnologists" xml:space="preserve">
+    <value>ТЕХНОЛОГИ :</value>
+  </data>
+  <data name="TehnologistsNames" xml:space="preserve">
+    <value>ШУШКОВ С.В., КРАУКЛИС А.В.</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>ВРЕМЯ</value>
+  </data>
+  <data name="TimeAxisTitle" xml:space="preserve">
+    <value>ВРЕМЯ</value>
+  </data>
+  <data name="Voltage" xml:space="preserve">
+    <value>НАПРЯЖЕНИЕ, В</value>
+  </data>
+  <data name="VoltageAxisTitle" xml:space="preserve">
+    <value>НАПРЯЖЕНИЕ, В</value>
+  </data>
+  <data name="WelcomeIformation" xml:space="preserve">
+    <value>Стенд испытания аккумуляторных батарей разработан для тестирования добавок углеродных наноматериалов в электролит . </value>
+  </data>
+  <data name="MinskBelarus" xml:space="preserve">
+    <value>МИНСК, БЕЛАРУСЬ</value>
+  </data>
+  <data name="MsgExitApplication" xml:space="preserve">
+    <value>ВЫ ХОТИТЕ ЗАКРЫТЬПРИЛОЖЕНИЕ?</value>
+  </data>
+  <data name="Apply" xml:space="preserve">
+    <value>УСТАНОВИТЬ</value>
+  </data>
+  <data name="BattertyParameters" xml:space="preserve">
+    <value>СОСТОЯНИЕ БАТАРЕИ</value>
+  </data>
+  <data name="ChargeCycle" xml:space="preserve">
+    <value>СТАДИЯ ЗАРЯДА БАТАРЕИ</value>
+  </data>
+  <data name="DischargeCycle" xml:space="preserve">
+    <value>СТАДИЯ РАЗРЯДА БАТАРЕИ</value>
+  </data>
+  <data name="RelaxCycle" xml:space="preserve">
+    <value>ОЖИДАНИЕ ПЕРЕД ЦИКЛОМ РАЗРЯДА</value>
+  </data>
+  <data name="ChargeTimeout" xml:space="preserve">
+    <value>ПРЕВЫШЕНО ДОПУСТИМОЕ ВРЕМЯ ЗАРЯДА БАТАРЕИ</value>
+  </data>
+  <data name="CurrentStabilityRecived" xml:space="preserve">
+    <value>ДОСТИГНУТ ПРЕДЕЛ ТОКА ЗАРЯДКИ</value>
+  </data>
+  <data name="MsgStopExperiment" xml:space="preserve">
+    <value>ВЫ ДЕЙСТВИТЕЛЬНО ХОТИТЕ ПРЕРВАТЬ ИСПЫТАНИЯ?</value>
+  </data>
+  <data name="OperationDetails" xml:space="preserve">
+    <value>ДЕТАЛИ ИСПЫТАНИЯ</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UnhandledExceptionMessage" xml:space="preserve">
+    <value>Unhandled exception detect : {0}</value>
+  </data>
+  <data name="VoltageLimitRecived" xml:space="preserve">
+    <value>ПРЕДЕЛ НАПРЯЖЕНИЯ БАТАРЕИИ {0}</value>
+  </data>
+  <data name="WaitingUser" xml:space="preserve">
+    <value>ОЖИДАНИЕ ДЕЙСТВИЙ ПОЛЬЗОВАТЕЛЯ</value>
+  </data>
+  <data name="ParAfterchargeRelaxation" xml:space="preserve">
+    <value>ВРЕМЯ ПРОСТОЯ ПОСЛЕ ЗАРЯДА</value>
+  </data>
+  <data name="ParBatteryCapacity" xml:space="preserve">
+    <value>ЕМКОСТЬ БАТАРЕИ, Ah</value>
+  </data>
+  <data name="ParBatteryLowVoltageLimit" xml:space="preserve">
+    <value>ПРЕДЕЛ НАПРЯЖЕНИЯ ПРИ РАЗРЯДЕ, В</value>
+  </data>
+  <data name="ParChargeVoltage" xml:space="preserve">
+    <value>НАПРЯЖЕНИЯ ЗАРЯДА, В</value>
+  </data>
+  <data name="ParChargeTimeout" xml:space="preserve">
+    <value>ПРЕДЕЛЬНОЕ ВРЕМЯ ЗАРЯДА</value>
+  </data>
+  <data name="ParCurrentPercentsLimit" xml:space="preserve">
+    <value>ОГРАНИЧЕНИЕ ТОКА ПРИ ЗАРЯДКЕ, %</value>
+  </data>
+  <data name="ParCurrentStability" xml:space="preserve">
+    <value>ОКНО ВЫРАВНИВАНИЯ ТОКА</value>
+  </data>
+  <data name="ParStartFrom" xml:space="preserve">
+    <value>НАЧИНАТЬ С ЗАРЯДА</value>
+  </data>
+  <data name="ParBatteryHighVoltageLimit" xml:space="preserve">
+    <value>ПРЕДЕЛ НАПРЯЖЕНИЯ ПРИ ЗАРЯДЕ, В</value>
+  </data>
+  <data name="BatCurrent" xml:space="preserve">
+    <value>ТОК БАТАРЕИ, А</value>
+  </data>
+  <data name="ParChargeWhenComplete" xml:space="preserve">
+    <value>ЗАРЯДКА ПРИ ОКОНЧАНИИ</value>
+  </data>
+  <data name="ParCycleCount" xml:space="preserve">
+    <value>КОЛИЧЕСТВО ЦИКЛОВ</value>
+  </data>
+  <data name="PSCurrent" xml:space="preserve">
+    <value>ТОК ИП, А</value>
+  </data>
+  <data name="BatteryWithCNMTitle" xml:space="preserve">
+    <value>МОДИФИЦИРОВАННАЯ БАТАРЕЯ</value>
+  </data>
+  <data name="ChargeCompareChartTitle" xml:space="preserve">
+    <value>СРАВНЕНИЕ СТАДИЙ ЗАРЯДА</value>
+  </data>
+  <data name="ChargeDurationHeader" xml:space="preserve">
+    <value>Длительность заряда</value>
+  </data>
+  <data name="ChargeValueHeader" xml:space="preserve">
+    <value>Заряд, Ah</value>
+  </data>
+  <data name="CycleNoHeader" xml:space="preserve">
+    <value>№ Цикла</value>
+  </data>
+  <data name="DischargeDurationHeader" xml:space="preserve">
+    <value>Длительность разряда</value>
+  </data>
+  <data name="DischargeValueHeader" xml:space="preserve">
+    <value>Разряд, Ah</value>
+  </data>
+  <data name="DishargeCompareChartTitle" xml:space="preserve">
+    <value>СРАВНЕНИЕ СТАДИЙ РАЗРЯДА</value>
+  </data>
+  <data name="SingleBatteryTitle" xml:space="preserve">
+    <value>ЭТАЛОННАЯ БАТАРЕЯ</value>
+  </data>
+  <data name="BatteryUsingCNM" xml:space="preserve">
+    <value>МОДИФИЦИРОВАННАЯ</value>
+  </data>
+  <data name="SingleBattery" xml:space="preserve">
+    <value>ЭТАЛОННАЯ</value>
+  </data>
+  <data name="ParametersTitle" xml:space="preserve">
+    <value>ПАРАМЕТРЫ ТЕСТИРОВАНИЯ</value>
+  </data>
+</root>

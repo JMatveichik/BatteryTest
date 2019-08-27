@@ -1,0 +1,115 @@
+﻿<UserControl
+    x:Class="NanoBatteryTest.Controls.BatteryParametersPanel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:l="clr-namespace:ArtWPFHelpers.Localization;assembly=ArtWPFHelpers"
+    xmlns:local="clr-namespace:NanoBatteryTest.Controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tel="http://schemas.telerik.com/2008/xaml/presentation"
+    d:DesignHeight="500"
+    d:DesignWidth="400"
+    mc:Ignorable="d">
+
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <!--
+        <Border
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            Style="{StaticResource BorderUnderlineStyle}">
+            <TextBlock Style="{StaticResource PageInformationStyle}" Text="{l:Localization BattertyNominals}" />
+
+        </Border>
+
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="0"
+            Style="{StaticResource PageSmallValue}"
+            Text="{l:Localization Voltage}" />
+
+        <tel:RadNumericUpDown
+            Grid.Row="2"
+            Grid.Column="0"
+            Margin="20,5"
+            CustomUnit=",V"
+            LargeChange="0.5"
+            Maximum="10.0"
+            Minimum="1.0"
+            NumberDecimalDigits="2"
+            SmallChange="0.1"
+            Style="{StaticResource NumericUpDownStyle}"
+            Value="{Binding BatteryNominalVoltage}" />
+
+        <TextBlock
+            Grid.Row="1"
+            Grid.Column="1"
+            Style="{StaticResource PageSmallValue}"
+            Text="{l:Localization Capacity}" />
+
+        <tel:RadNumericUpDown
+            Grid.Row="2"
+            Grid.Column="1"
+            Margin="20,5"
+            CustomUnit=",Ah"
+            LargeChange="0.5"
+            Maximum="60.0"
+            Minimum="1.0"
+            NumberDecimalDigits="1"
+            SmallChange="1.0"
+            Style="{StaticResource NumericUpDownStyle}"
+            Value="{Binding BatteryNominalCurrent}" />
+        -->
+
+        <Border
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            Margin="0,20,0,0"
+            Style="{StaticResource BorderUnderlineStyle}">
+
+            <TextBlock Style="{StaticResource PageTitleStyle}" Text="{l:Localization BattertyParameters}" />
+
+        </Border>
+
+        <TextBlock
+            Grid.Row="4"
+            Style="{StaticResource PageSmallValue}"
+            Text="{l:Localization Voltage}" />
+
+        <TextBlock
+            Grid.Row="5"
+            Margin="30,10"
+            Style="{StaticResource PageLargeValue}"
+            Text="{Binding BatteryVoltage, StringFormat=\{0:F2\}}" />
+
+        <TextBlock
+            Grid.Row="4"
+            Grid.Column="1"
+            Style="{StaticResource PageSmallValue}"
+            Text="{l:Localization Current}" />
+
+        <TextBlock
+            Grid.Row="5"
+            Grid.Column="1"
+            Margin="30,10"
+            Style="{StaticResource PageLargeValue}"
+            Text="{Binding BatteryCurrent, StringFormat=\{0:F3\}}" />
+
+    </Grid>
+</UserControl>

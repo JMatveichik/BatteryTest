@@ -1,0 +1,302 @@
+﻿<UserControl
+    x:Class="NanoBatteryTest.Content.AppHeader"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cmd="clr-namespace:NanoBatteryTest.Commands"
+    xmlns:conv="clr-namespace:ArtWPFHelpers.Converters;assembly=ArtWPFHelpers"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:globalization="clr-namespace:System.Globalization;assembly=mscorlib"
+    xmlns:l="clr-namespace:ArtWPFHelpers.Localization;assembly=ArtWPFHelpers"
+    xmlns:local="clr-namespace:NanoBatteryTest.Content"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:tel="http://schemas.telerik.com/2008/xaml/presentation"
+    mc:Ignorable="d">
+
+    <UserControl.Resources>
+
+        <conv:CultureStrToFlagImageConverter x:Key="CultureStrToImage" />
+        <conv:UpperCaseConverter x:Key="UpperCase" />
+
+        <Style x:Key="WndTitle" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontFamily" Value="PF Din Text Pro" />
+        </Style>
+
+        <Style
+            x:Key="WndSubTitle"
+            BasedOn="{StaticResource WndTitle}"
+            TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16" />
+
+        </Style>
+
+        <Style
+            x:Key="PageClockStyle"
+            BasedOn="{StaticResource WndTitle}"
+            TargetType="TextBlock">
+            <Setter Property="FontSize" Value="22" />
+            <Setter Property="Foreground" Value="DarkBlue" />
+
+        </Style>
+
+
+
+        <SolidColorBrush
+            x:Key="fBrush"
+            Opacity="0.8"
+            Color="{Binding Palette.AccentFocusedColor}" />
+
+        <SolidColorBrush x:Key="sBrush" Color="{Binding Palette.AccentColor}" />
+
+
+
+        <PathGeometry x:Key="bgPath">
+            <PathFigure IsClosed="True" StartPoint="0,0">
+                <LineSegment Point="450, 0" />
+                <LineSegment Point="430, 60" />
+                <LineSegment Point="0, 60" />
+            </PathFigure>
+        </PathGeometry>
+
+
+        <PathGeometry x:Key="bgPath2">
+            <PathFigure IsClosed="True" StartPoint="460, 0">
+                <LineSegment Point="490, 0" />
+                <LineSegment Point="470, 60" />
+                <LineSegment Point="440, 60" />
+            </PathFigure>
+        </PathGeometry>
+
+        <PathGeometry x:Key="bgPath3">
+            <PathFigure IsClosed="True" StartPoint="500, 0">
+                <LineSegment Point="520, 0" />
+                <LineSegment Point="500, 60" />
+                <LineSegment Point="480, 60" />
+            </PathFigure>
+        </PathGeometry>
+
+        <PathGeometry x:Key="bgPath4">
+            <PathFigure IsClosed="True" StartPoint="530, 0">
+                <LineSegment Point="540, 0" />
+                <LineSegment Point="520, 60" />
+                <LineSegment Point="510, 60" />
+            </PathFigure>
+        </PathGeometry>
+
+        <VisualBrush
+            x:Key="bgHeaderBrush"
+            AlignmentX="Left"
+            Stretch="None">
+            <VisualBrush.Visual>
+                <Path
+                    Fill="{StaticResource sBrush}"
+                    Stroke="{StaticResource fBrush}"
+                    StrokeThickness="0.5">
+                    <Path.Data>
+                        <CombinedGeometry GeometryCombineMode="Union">
+                            <CombinedGeometry.Geometry1>
+                                <CombinedGeometry
+                                    CombinedGeometry.Geometry1="{StaticResource bgPath}"
+                                    CombinedGeometry.Geometry2="{StaticResource bgPath2}"
+                                    GeometryCombineMode="Union" />
+                            </CombinedGeometry.Geometry1>
+
+                            <CombinedGeometry.Geometry2>
+                                <CombinedGeometry
+                                    CombinedGeometry.Geometry1="{StaticResource bgPath3}"
+                                    CombinedGeometry.Geometry2="{StaticResource bgPath4}"
+                                    GeometryCombineMode="Union" />
+                            </CombinedGeometry.Geometry2>
+                        </CombinedGeometry>
+
+                    </Path.Data>
+                </Path>
+            </VisualBrush.Visual>
+        </VisualBrush>
+
+
+    </UserControl.Resources>
+
+
+
+    <Grid
+        Height="60"
+        Margin="1"
+        Background="{StaticResource bgHeaderBrush}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+
+        <Image
+            Grid.Column="0"
+            Width="50"
+            Height="50"
+            Margin="5,0"
+            Source="/NanoBatteryTest;component/Resources/ArtechLogo01.png">
+            <Image.Effect>
+                <DropShadowEffect
+                    BlurRadius="5"
+                    Opacity="1"
+                    ShadowDepth="0"
+                    Color="White" />
+            </Image.Effect>
+        </Image>
+        <StackPanel
+            Grid.Column="1"
+            Margin="10,0"
+            VerticalAlignment="Center"
+            Orientation="Vertical">
+            <TextBlock
+                Style="{StaticResource WndTitle}"
+                Text="{l:Localization Art}"
+                TextAlignment="Left" />
+            <TextBlock
+                Style="{StaticResource WndSubTitle}"
+                Text="{l:Localization AppTitle}"
+                TextAlignment="Left" />
+            <TextBlock
+                Style="{StaticResource WndSubTitle}"
+                Text="{Binding Version, Mode=OneWay}"
+                TextAlignment="Left" />
+        </StackPanel>
+
+        <Grid Grid.Column="3">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+
+
+            <tel:RadButton
+                Grid.Column="6"
+                Margin="5,5"
+                Command="cmd:BanchCommands.Exit">
+                <Button.Content>
+                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                        <Image Source="{StaticResource CloseImage}" Style="{StaticResource TollBarImage}" />
+
+                    </StackPanel>
+                </Button.Content>
+            </tel:RadButton>
+
+
+
+
+            <tel:RadButton
+                Grid.Column="1"
+                Margin="5,5"
+                Command="cmd:BanchCommands.Start">
+                <Button.Content>
+                    <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                        <Image Source="{StaticResource StartImage}" Style="{StaticResource TollBarImage}" />
+                    </StackPanel>
+                </Button.Content>
+            </tel:RadButton>
+
+
+
+
+
+            <tel:RadButton
+                Grid.Column="3"
+                Margin="20,5"
+                Command="cmd:BanchCommands.Stop">
+                <Button.Content>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{StaticResource StopImage}" Style="{StaticResource TollBarImage}" />
+                    </StackPanel>
+                </Button.Content>
+            </tel:RadButton>
+
+        </Grid>
+
+        <Grid Grid.Column="4">
+            <Grid.Resources>
+                <Style x:Key="AccentText" TargetType="TextBlock">
+                    <Setter Property="FontFamily" Value="Century Gothic" />
+                    <Setter Property="FontSize" Value="24" />
+                    <Setter Property="Foreground" Value="{StaticResource sBrush}" />
+                    <Setter Property="TextAlignment" Value="Center" />
+                </Style>
+            </Grid.Resources>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+
+            <Border
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="10,0"
+                Style="{StaticResource BorderUnderlineStyle}">
+                <TextBlock
+                    Style="{StaticResource PageClockStyle}"
+                    Text="{Binding CurrentTime, StringFormat='{}{0:dd MMMM} '}"
+                    TextAlignment="Center" />
+            </Border>
+
+            <Border
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="10,0"
+                Style="{StaticResource BorderUnderlineStyle}">
+                <TextBlock
+                    Style="{StaticResource PageClockStyle}"
+                    Text="{l:Localization Language}"
+                    TextAlignment="Center" />
+            </Border>
+
+            <TextBlock
+                Grid.Row="1"
+                Grid.Column="0"
+                Style="{StaticResource PageClockStyle}"
+                Text="{Binding CurrentTime, StringFormat='{}{0:HH:mm:ss} '}" />
+
+            <tel:RadComboBox
+                Grid.Row="1"
+                Grid.Column="1"
+                MaxWidth="120"
+                Margin="10,3,10,3"
+                BorderThickness="0"
+                ItemsSource="{Binding CultureInfos}"
+                SelectedItem="{Binding CurrentCulture}">
+                <tel:RadComboBox.ItemTemplate>
+                    <DataTemplate DataType="{x:Type globalization:CultureInfo}">
+                        <StackPanel Orientation="Horizontal">
+                            <Image
+                                Width="20"
+                                Margin="3"
+                                Source="{Binding ThreeLetterISOLanguageName, Converter={StaticResource CultureStrToImage}}"
+                                ToolTip="{Binding Path=DisplayName}" />
+                            <TextBlock VerticalAlignment="Center" Text="{Binding Path=NativeName}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </tel:RadComboBox.ItemTemplate>
+
+            </tel:RadComboBox>
+        </Grid>
+
+    </Grid>
+
+
+</UserControl>
